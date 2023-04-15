@@ -113,6 +113,8 @@ else
 	echo "CONFIG_BAUDRATE=115200" >> ${DEFCONFIG}
 fi
 
+echo "CONFIG_SPI_FLASH_XMC=y" >> ${DEFCONFIG}
+
 make mt7621_build_defconfig
 make CROSS_COMPILE=${Toolchain} STAGING_DIR=${Staging}
 make savedefconfig
