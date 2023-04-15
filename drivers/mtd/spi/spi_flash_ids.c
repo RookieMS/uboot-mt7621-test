@@ -190,6 +190,11 @@ const struct spi_flash_info spi_flash_ids[] = {
 	{"w25q256fw",	   INFO(0xef6019, 0x0,	64 * 1024,   512, RD_FULL | WR_QPP | SECT_4K) },
 	{"w25q256jw",	   INFO(0xef7019, 0x0,	64 * 1024,   512, RD_FULL | WR_QPP | SECT_4K) },
 #endif
+#ifdef CONFIG_SPI_FLASH_XMC
+	/* XMC (Wuhan Xinxin Semiconductor Manufacturing Corp.) */
+	{"xm25qh128c",	   INFO(0x204018, 0x0,	64 * 1024,   256, RD_FULL | WR_QPP | SECT_4K) },
+	{"xm25qw256c",	   INFO(0x204019, 0x0,	64 * 1024,   512, RD_FULL | WR_QPP | SECT_4K) },
+#endif
 	{},	/* Empty entry to terminate the list */
 	/*
 	 * Note:
