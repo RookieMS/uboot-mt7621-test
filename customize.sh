@@ -114,6 +114,9 @@ else
 fi
 
 echo "CONFIG_SPI_FLASH_XMC=y" >> ${DEFCONFIG}
+echo "CONFIG_ENV_IS_IN_SPI_FLASH=y" >> ${DEFCONFIG}
+echo "CONFIG_ENV_SECT_SIZE=0x10000" >> ${DEFCONFIG}
+echo "CONFIG_ENV_OFFSET=0x40000" >> ${DEFCONFIG}
 
 make mt7621_build_defconfig
 make CROSS_COMPILE=${Toolchain} STAGING_DIR=${Staging}
